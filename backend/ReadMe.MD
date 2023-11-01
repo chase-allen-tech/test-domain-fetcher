@@ -1,4 +1,4 @@
-# Domain Parser in Golang #
+# Domain Status Fetcher in Golang #
 ## Overview ##
 This application is designed to provide status code with the provided domain in request path.
 
