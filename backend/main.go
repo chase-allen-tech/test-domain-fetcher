@@ -19,7 +19,7 @@ const (
 	STATUS_ALL    = "all-status"
 )
 
-// Email is used for the main contents of email
+// Status is used to set response
 type Status struct {
 	Url        string `json:"url"`
 	StatusCode int    `json:"statusCode"`
@@ -37,7 +37,7 @@ func doRequest(url string) (int, error) {
 	return resp.StatusCode, nil
 }
 
-// StatusHandler is parsing emails.zip folder and return slice of email threads to the response
+// StatusHandler is fetching status of the provided path
 func StatusHandler(c *fiber.Ctx) error {
 	urls := map[string]string{
 		STATUS_GOOGLE: "https://www.google.com",
